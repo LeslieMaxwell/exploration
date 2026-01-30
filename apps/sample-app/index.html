@@ -3,14 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample App</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Sample App</h1>
-      <p>This is a sample app in the monorepo.</p>
-      <p>Edit <code>apps/sample-app/</code> to get started.</p>
+      <h1>Todo App</h1>
+
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="Add a new task..." required />
+        <select id="category-select">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="shopping">Shopping</option>
+          <option value="health">Health</option>
+          <option value="learning">Learning</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+
+      <div id="categories">
+        <div class="category" data-category="work">
+          <h2>Work</h2>
+          <ul class="todo-list"></ul>
+        </div>
+        <div class="category" data-category="personal">
+          <h2>Personal</h2>
+          <ul class="todo-list"></ul>
+        </div>
+        <div class="category" data-category="shopping">
+          <h2>Shopping</h2>
+          <ul class="todo-list"></ul>
+        </div>
+        <div class="category" data-category="health">
+          <h2>Health</h2>
+          <ul class="todo-list"></ul>
+        </div>
+        <div class="category" data-category="learning">
+          <h2>Learning</h2>
+          <ul class="todo-list"></ul>
+        </div>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
